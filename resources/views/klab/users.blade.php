@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
         <tbody  class="text-white">
             @foreach ($User as $item)
           <tr>
-            <td><img src="{{asset('storage/images/'.$item->image)}}" alt="" class="mr-3 mt-3 rounded-circle" style="width:60px;height:60px;"></td>
+            <td><img src="{{asset('images/'. $item->image) }}" alt="" class="mr-3 mt-3 rounded-circle" style="width:60px;height:60px;"></td>
             <td>{{$item->name}}</td>
             <td><a href="/klab/{{$item->id}}" class="btn btn-primary">Content</td>
                 <td><?php

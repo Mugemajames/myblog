@@ -84,7 +84,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                             @endif
                         @else
                         @if(Auth::user()->image)
-                        <img class="image rounded-circle" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile_image" style="width: 50px;height: 50px; padding: 10px; margin: 0px; ">
+                        <img class="image rounded-circle" src="{{asset('images/'. $item->image) }}" alt="profile_image" style="width: 50px;height: 50px; padding: 10px; margin: 0px; ">
                    @endif
    
                             <li class="nav-item dropdown">
