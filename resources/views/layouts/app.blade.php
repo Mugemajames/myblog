@@ -60,6 +60,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                         <li class="nav-item">
                           <a class="nav-link" href="{{ __('/klab/create') }}">Create</a>
                         </li>
+
                     </ul>
                     <ul class="navbar-nav me-auto">
                         

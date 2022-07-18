@@ -35,6 +35,9 @@ Route::post('/like-post/{id}',[ContentsController::class,'likePost'])->name('lik
 Route::post('/unlike-post/{id}',[ContentsController::class,'unlikePost'])->name('unlike.post');
 Route::get('follow/{id}',[ContentsController::class,'follow'])->name('follow');
 Route::get('delete/{id}',[ContentsController::class,'unfollow'])->name('unfollow');
+Route::get('deletemyaccount/{id}',[App\Http\Controllers\HomeController::class,'deletemyaccountfn']);
+Route::get('manageusers',[App\Http\Controllers\HomeController::class,'viewusers'])->name('manageuser');
+Route::get('deleteuseraccount/{id}',[App\Http\Controllers\HomeController::class,'deleteuseraccountfn']);
 
 //send email
 Route::get('/',[ContentsController::class,'myblog']);

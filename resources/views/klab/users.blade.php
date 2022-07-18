@@ -2,6 +2,7 @@
 @section('content')
 @php
 use App\Models\follow;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 @endphp
@@ -37,6 +38,17 @@ use Illuminate\Support\Facades\Auth;
           </tr>
           <tr>
             @endforeach
+
+            <?php
+              $user_id= auth()->user()->id;
+              $User= User::all()->where('id','!=',$user_id);
+              $countuser=collect($User)->count();
+              if($countuser  == 0){
+                ?>
+                  <td colspan="4" class="text-center">No records found !</td>
+                <?php
+              }
+            ?>
          
         </tbody>
       </table>

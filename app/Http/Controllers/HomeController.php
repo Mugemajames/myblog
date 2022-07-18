@@ -39,5 +39,22 @@ class HomeController extends Controller
         }
         return redirect()->back();
     }
-    
+    function deletemyaccountfn($id){
+        user::find($id)->delete();
+        return redirect('login');
+    }
+
+    public function viewusers()
+    {
+        $user_id= auth()->user()->id;
+        $User= User::all()->where('id','!=',$user_id);
+        return view('viewusers')->with('User',$User);
+    }
+    function deleteuseraccountfn($id){
+        $delete=user::find($id)->delete();
+        if($delete){
+            return redirect()->back()->with('delt','user deleted successfully !');
+        }
+      
+    }
 }

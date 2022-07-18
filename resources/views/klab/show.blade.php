@@ -5,7 +5,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header"><h3>{{$user->name}}</h3></div>
-
                 <div class="card-body">
 @forelse ($user->contents as $item)
 
