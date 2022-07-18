@@ -23,8 +23,8 @@
             @foreach ($User as $item)
                 <tr>
                     <td><img src="{{asset('images/'. $item->image) }}" alt="" class="mr-3 mt-3 rounded-circle" style="width:60px;height:60px;"></td>
-                    <td>{{$item->name}}</td> 
-                    <td>{{$item->email}}</td> 
+                    <td style="color: black";>{{$item->name}}</td> 
+                    <td style="color: black";>{{$item->email}}</td> 
                     <td><a href="{{url('deleteuseraccount')}}/{{$item->id}}"><button class="btn btn-danger" onclick="return confirm('are u sure ?')">Delete account</button></a></td> 
                 </tr>
             @endforeach
