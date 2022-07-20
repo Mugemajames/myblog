@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
 
 @php
@@ -25,7 +25,12 @@
                     <td><img src="{{asset('images/'. $item->image) }}" alt="" class="mr-3 mt-3 rounded-circle" style="border:2px solid teal;width:60px;height:60px;"></td>
                     <td style="color: black;padding-top:30px;">{{$item->name}}</td> 
                     <td style="color: black;padding-top:30px;">{{$item->email}}</td> 
-                    <td><a href="{{url('deleteuseraccount')}}/{{$item->id}}"><button class="btn btn-danger" onclick="return confirm('are u sure ?')">Delete account</button></a></td> 
+                    <td><a href="{{url('deleteuseraccount')}}/{{$item->id}}">
+                      <button class="btn btn-danger" onclick="return confirm('are u sure ?')">Delete</button>
+                      </a>
+                      <a href="{{url('edituser')}}/{{$item->id}}">
+                      <button class="btn btn-primary" onclick="return confirm('are u sure ?')">Edit</button>
+                    </a></td> 
                 </tr>
             @endforeach
 
